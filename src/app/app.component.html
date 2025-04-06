@@ -1,13 +1,13 @@
 <div class="main">
     <header class="header">
-        <ul class="menu">
+        <ul class="menu" #menu>
             <li class="menu__item"><a class="menu__link">Home</a></li>
             <li class="menu__item"><a class="menu__link">About Us</a></li>
             <li class="menu__item"><a class="menu__link">Team</a></li>
             <li class="menu__item"><a class="menu__link">Services</a></li>
             <li class="menu__item"><a class="menu__link">Testimonials</a></li>      
         </ul>
-        <ul class="menu menu-right">
+        <ul class="menu menu-right" #menuSecond>
             <li class="menu__item"><a class="menu__link">Blog</a></li>
             <li class="menu__item"><a class="menu__link">FAQ</a></li>
         </ul>
@@ -15,7 +15,7 @@
 
     <section class="first-section">
         <div class="info">
-            <h1 class="heading-1">Almatic</h1>
+            <h1 class="heading-1">Almatin Investment Limited</h1>
             <p class="paragraph">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Nisi illo rem, nobis iure soluta in. Eligendi blanditiis
@@ -25,19 +25,19 @@
         </div>
         <div class="visuals">
             <div class="image-container">
-                <img src="" alt="">
+                <img #imageFirst src="./../assets/images/first.jpg" alt="">
             </div>
             <div class="image-container">
-                <img src="" alt="">
+                <img #imageSecond src="./../assets/images/second.jpg" alt="">
             </div>
         </div>
     </section>
 
-    <section class="second-section">
+    <section class="second-section" #secondSection>
         <div class="box"></div>
-        <h4 class="heading-h4" id="about">About Us</h4>
-        <h1 class="heading-1" id="">
-            Lorem ipsum dolor sit, amet consectetur 
+        <h4 class="heading-4" id="about">About Us</h4>
+        <h1 class="heading-1" id="buy">
+            Buying ipsum dolor sit, amet consectetur 
             adipisicing elit. Alias rerum hic illum atque.
         </h1>
         <div class="info-1">
@@ -51,10 +51,10 @@
                 <p class="paragraph">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolorem, aut iste saepe eos a minima minus inventore sed quam deleniti ullam ipsa aperiam nobis.
                 </p>
-                <div class="btn--learn">Learn More</div>
+                <div class="btn btn--learn">Learn More</div>
             </div>
             <div class="info-1__visual">
-                <img src="" alt="">
+                <img src="./../assets/images/solo.jpg" alt="">
             </div>
         </div>
     </section>
