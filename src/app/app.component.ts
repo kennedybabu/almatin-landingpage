@@ -21,10 +21,6 @@ export class AppComponent  implements OnInit {
   @ViewChild('imageFirst', { static: true }) imageFirst!: ElementRef<HTMLDivElement>;
   @ViewChild('imageSecond', { static: true }) imageSecond!: ElementRef<HTMLDivElement>;
 
-
-
-
-
   constructor(@Inject(DOCUMENT) private document:Document) {
 
   }
@@ -198,6 +194,12 @@ export class AppComponent  implements OnInit {
       delay: .6
     })
     gsap.from(this.document.querySelector('.paragraph'), {
+      duration: .7,
+      opacity:0,
+      y:-30,
+      delay: .6
+    })
+    gsap.from(this.document.querySelector('#buy'), {
       duration: .7,
       opacity:0,
       y:-30,
