@@ -60,24 +60,20 @@
     </section>
     <section class="third-section" #thirdSection>
         <h4 class="heading-4" id="team">Team</h4>
-        <h1 class="heading-1">Meet Our Team</h1>
+        <!-- <h1 class="heading-1">Meet Our Team</h1> -->
         <div class="team">
-            <div class="team-member card">one</div>
+            <div class="team-member card">
+                <div class="overlay" (click)="openDialog()">
+                    Lorem ipsum dolor sit amet.
+                </div>
+            </div>
             <div class="team-member card">one</div>
             <div class="team-member card">one</div>
             <div class="team-member card">one</div>
             <div class="team-member card">one</div>
         </div>
-        <!-- <div class="team-1__visual">
-
-        </div>
-        <div class="team-1__info">
-            <h4 class="heading-4">
-                Lorem, ipsum dolor.
-            </h4>
-            <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, cupiditate. Consequatur doloremque deserunt qui illum harum possimus praesentium sed quasi?</p>
-        </div> -->
     </section>
+
     <footer class="footer">
         <div class="footer__content">
             <div class="footer__brand">
@@ -86,7 +82,7 @@
             </div>
             
             <div class="footer__links">
-                <div class="footer__column">
+                <div class="footer__column" style="color: #2b2b2b;;">
                     <h4 class="footer__heading">Navigation</h4>
                     <ul class="footer__menu">
                         <li class="footer__item"><a href="#" class="footer__link">Home</a></li>

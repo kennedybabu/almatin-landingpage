@@ -1,12 +1,23 @@
-import { Component, OnInit, Inject, ViewChild, ElementRef, viewChild } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, ElementRef, viewChild, inject } from '@angular/core';
 import { gsap} from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { DOCUMENT } from "@angular/common"
 import { trigger } from '@angular/animations';
+import {
+  MatDialog,
+  MAT_DIALOG_DATA,
+  MatDialogTitle,
+  MatDialogContent,
+} from '@angular/material/dialog';
+import { DialogComponent } from './core/shared/dialog/dialog/dialog.component';
 
 
 
 gsap.registerPlugin(ScrollTrigger);
+
+export interface DialogData {
+  animal: 'panda' | 'unicorn' | 'lion';
+}
 
 @Component({
   selector: 'app-root',
@@ -21,6 +32,16 @@ export class AppComponent  implements OnInit {
   @ViewChild('imageFirst', { static: true }) imageFirst!: ElementRef<HTMLDivElement>;
   @ViewChild('imageSecond', { static: true }) imageSecond!: ElementRef<HTMLDivElement>;
 
+
+  dialog = inject(MatDialog);
+
+  openDialog() {
+    this.dialog.open( DialogComponent, {
+      data: {
+        animal: 'panda'
+      }
+    })
+  }
   constructor(@Inject(DOCUMENT) private document:Document) {
 
   }
