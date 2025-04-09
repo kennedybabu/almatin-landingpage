@@ -10,10 +10,44 @@ import {
   MatDialogContent,
 } from '@angular/material/dialog';
 import { DialogComponent } from './core/shared/dialog/dialog/dialog.component';
+import * as teamData from './../assets/team.json';
 
 
 
 gsap.registerPlugin(ScrollTrigger);
+
+const data = [
+  {
+      "id": 1,
+      "name": "MR. ALEX KAMAI MADADI",
+      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
+      "role": "DIRECTOR"
+  },
+  {
+      "id": 2,
+      "name": "MRS. JOYCE KEMUNTO",
+      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
+      "role": "DIRECTOR"
+  },
+  {
+      "id": 3,
+      "name": "MR. JOLLIFF OCHIENG",
+      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
+      "role": "BUSINESS DEVELOPMENT LEAD"
+  },
+  {
+      "id": 4,
+      "name": "MR. BRIAN OTIENO OFWA",
+      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
+      "role": "FINANCE OFFICER"
+  },
+  {
+      "id": 5,
+      "name": "MR. IBRAHIM MATIN",
+      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
+      "role": "EDUCATION AND TRAINING LEAD"
+  }
+]
 
 export interface DialogData {
   animal: 'panda' | 'unicorn' | 'lion';
@@ -34,6 +68,7 @@ export class AppComponent  implements OnInit {
 
 
   dialog = inject(MatDialog);
+  data: any = data;
 
   openDialog() {
     this.dialog.open( DialogComponent, {
@@ -48,6 +83,7 @@ export class AppComponent  implements OnInit {
 
 
   ngOnInit(): void {
+    // console.log(this.data)
     this.initialAnimations();
     this.initScrollAnimations();
   }

@@ -1,0 +1,32 @@
+.dialog {
+    width: 700px;
+    height: 450px;
+    display: flex;
+    border-radius: 0!important;
+
+
+    .dialog__visual {
+        height: 100%;
+        width: 40%;
+        background-color: #2b2b2b;
+
+        img {
+            width: 100%;
+            
+        }
+    }
+
+
+    .dialog__info {
+        width: 60%;
+        padding: 20px;
+
+        .dialog__header {
+            margin-bottom: 20px;
+
+            h2 {
+                font-size: x-large;
+            }
+        }
+    }
+}
