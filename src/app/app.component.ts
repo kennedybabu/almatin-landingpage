@@ -21,37 +21,39 @@ const data = [
       "id": 1,
       "name": "MR. ALEX KAMAI MADADI",
       "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
-      "role": "DIRECTOR"
+      "role": "DIRECTOR",
+      "avatar": "assets/images/alex.png"
   },
   {
       "id": 2,
       "name": "MRS. JOYCE KEMUNTO",
       "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
-      "role": "DIRECTOR"
+      "role": "DIRECTOR",
+      "avatar": "assets/images/joyce.png"
   },
   {
       "id": 3,
       "name": "MR. JOLLIFF OCHIENG",
       "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
-      "role": "BUSINESS DEVELOPMENT LEAD"
+      "role": "BUSINESS DEVELOPMENT LEAD",
+      "avatar": "assets/images/jolliff.png"
   },
   {
       "id": 4,
       "name": "MR. BRIAN OTIENO OFWA",
       "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
-      "role": "FINANCE OFFICER"
+      "role": "FINANCE OFFICER",
+       "avatar": "assets/images/brian.png"
   },
   {
       "id": 5,
       "name": "MR. IBRAHIM MATIN",
       "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
-      "role": "EDUCATION AND TRAINING LEAD"
+      "role": "EDUCATION AND TRAINING LEAD",
+      "avatar": "assets/images/matin.png"
   }
 ]
 
-export interface DialogData {
-  animal: 'panda' | 'unicorn' | 'lion';
-}
 
 @Component({
   selector: 'app-root',
@@ -70,11 +72,9 @@ export class AppComponent  implements OnInit {
   dialog = inject(MatDialog);
   data: any = data;
 
-  openDialog() {
+  openDialog(user: any) {
     this.dialog.open( DialogComponent, {
-      data: {
-        animal: 'panda'
-      }
+      data: user
     })
   }
   constructor(@Inject(DOCUMENT) private document:Document) {
@@ -83,7 +83,7 @@ export class AppComponent  implements OnInit {
 
 
   ngOnInit(): void {
-    // console.log(this.data)
+    console.log(this.data)
     this.initialAnimations();
     this.initScrollAnimations();
   }

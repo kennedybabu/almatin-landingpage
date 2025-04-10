@@ -11,14 +11,14 @@
         "name": "MRS. JOYCE KEMUNTO",
         "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
         "role": "DIRECTOR",
-         "image": "assets/images/alex.png"
+        "image": "assets/images/alex.png"
     },
     {
         "id": 3,
         "name": "MR. JOLLIFF OCHIENG",
         "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
         "role": "BUSINESS DEVELOPMENT LEAD",
-         "image": "assets/images/alex.png"
+        "avatar": "assets/images/alex.png"
     },
     {
         "id": 4,
@@ -32,6 +32,6 @@
         "name": "MR. IBRAHIM MATIN",
         "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
         "role": "EDUCATION AND TRAINING LEAD",
-         "image": "assets/images/alex.png"
+        "image": "assets/images/alex.png"
     }
 ]

@@ -59,15 +59,16 @@
         </div>
     </section>
     <section class="third-section" #thirdSection>
-        <h4 class="heading-4" id="team">Team</h4>
-        <!-- <h1 class="heading-1">Meet Our Team</h1> -->
+        <h4 class="heading-4" id="team">Meet Our Team</h4>
         <div class="team">
             @for (user of data; track user.id) {
                <div>
                     <div class="team-member card">
-                        <img [src]='user.image' alt="{{user.name}}">
-                        <div class="overlay" (click)="openDialog()">
-                            Lorem ipsum dolor sit amet.
+                        <img [src]="user.avatar" alt="{{user.name}}">
+                        <div class="overlay" (click)="openDialog(user)">
+                            <div class="inner">
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
                         </div>
                     </div>
                    <div class="team__info">

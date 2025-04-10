@@ -10,4 +10,5 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class DialogComponent {
   data = inject(MAT_DIALOG_DATA);
+
 }
