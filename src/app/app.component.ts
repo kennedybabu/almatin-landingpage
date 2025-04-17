@@ -16,43 +16,6 @@ import * as teamData from './../assets/team.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const data = [
-  {
-      "id": 1,
-      "name": "MR. ALEX KAMAI MADADI",
-      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
-      "role": "DIRECTOR",
-      "avatar": "assets/images/alex.png"
-  },
-  {
-      "id": 2,
-      "name": "MRS. JOYCE KEMUNTO",
-      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
-      "role": "DIRECTOR",
-      "avatar": "assets/images/joyce.png"
-  },
-  {
-      "id": 3,
-      "name": "MR. JOLLIFF OCHIENG",
-      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
-      "role": "BUSINESS DEVELOPMENT LEAD",
-      "avatar": "assets/images/jolliff.png"
-  },
-  {
-      "id": 4,
-      "name": "MR. BRIAN OTIENO OFWA",
-      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
-      "role": "FINANCE OFFICER",
-       "avatar": "assets/images/brian.png"
-  },
-  {
-      "id": 5,
-      "name": "MR. IBRAHIM MATIN",
-      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore animi culpa facere iusto qui facilis harum tempore eius! Necessitatibus, natus.",
-      "role": "EDUCATION AND TRAINING LEAD",
-      "avatar": "assets/images/matin.png"
-  }
-]
 
 
 @Component({
@@ -63,53 +26,21 @@ const data = [
 export class AppComponent  implements OnInit {
   // title = 'almatin-landingpage';
   @ViewChild('secondSection', { static: true }) secondSection!: ElementRef<HTMLDivElement>;
-  @ViewChild('menu', { static: true }) menu!: ElementRef<HTMLDivElement>;
-  @ViewChild('menuSecond', { static: true }) menuSecond!: ElementRef<HTMLDivElement>;
-  @ViewChild('imageFirst', { static: true }) imageFirst!: ElementRef<HTMLDivElement>;
-  @ViewChild('imageSecond', { static: true }) imageSecond!: ElementRef<HTMLDivElement>;
 
 
-  dialog = inject(MatDialog);
-  data: any = data;
 
-  openDialog(user: any) {
-    this.dialog.open( DialogComponent, {
-      data: user
-    })
-  }
   constructor(@Inject(DOCUMENT) private document:Document) {
 
   }
 
 
   ngOnInit(): void {
-    console.log(this.data)
     this.initialAnimations();
     this.initScrollAnimations();
   }
 
   initScrollAnimations(): void {
-    gsap.to(this.imageFirst.nativeElement, {
-      scrollTrigger:{
-        trigger: this.imageFirst.nativeElement,
-        scrub: true,
-        start: '110% center',
-      } as gsap.plugins.ScrollTriggerInstanceVars,
-      duration: 1.1,
-      scale: 1.2,
-      height: 250,
-    })
 
-    gsap.to(this.imageSecond.nativeElement, {
-      scrollTrigger:{
-        trigger: this.imageFirst.nativeElement,
-        scrub: true,
-        start: '80% center',
-      } as gsap.plugins.ScrollTriggerInstanceVars,
-      duration: 1.1,
-      scale: 1.2,
-      height: 380,
-    })
     gsap.to(this.document.querySelector('.heading-1'), {
       ScrollTrigger: {
         trigger: this.document.querySelector('.heading-1'),
@@ -217,33 +148,8 @@ export class AppComponent  implements OnInit {
 
   }
 
-  initialAnimations(): void {
-    gsap.from(this.menu.nativeElement.childNodes, {
-      duration: 0.5,
-      opacity:0,
-      y: -20,
-      stagger: 0.2,
-      delay: 0.5
-    })
-    gsap.from(this.menuSecond.nativeElement.childNodes, {
-      duration: 0.5,
-      opacity:0,
-      y: -20,
-      stagger: 0.2,
-      delay: 0.8
-    })
-    gsap.from(this.imageFirst.nativeElement.childNodes, {
-      duration: 0.7,
-      opacity:0,
-      y: -30,
-      delay: 0.5
-    })
-    gsap.from(this.imageSecond.nativeElement.childNodes, {
-      duration: 0.7,
-      opacity:0,
-      y: -30,
-      delay: 0.6
-    })
+  initialAnimations(): void { 
+
     gsap.from(this.document.querySelector('.heading-1'), {
       duration: .7,
       opacity:0,

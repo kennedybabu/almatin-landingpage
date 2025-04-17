@@ -1,0 +1,126 @@
+:host {
+    grid-row: 4/5;
+    grid-column: center-start/center-end;
+    display: block;
+    border-right: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+  }
+
+.fourth-section {
+    padding: 0 20px!important;
+    grid-column: center-start / center-end;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 20px;
+    color: #474747;
+    padding-bottom: 20px!important;
+
+    span.quote {
+        font-size: 120px;
+        transform: translateY(80px);
+    }
+
+    .heading-3 {
+        color: #646464;
+    }
+
+    .heading-1 {
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+    .info {
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+   
+    }
+
+    .upper {
+        display: flex;
+        gap: 20px;
+        
+
+        p {
+            font-size: 20px;
+        }
+
+        .mission {
+            flex: 1;
+            padding: 20px!important;
+            height: 600px;
+            background-color: #f02d3a10;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+
+            i{
+                font-size: 300px;
+                position: absolute;
+                left: -80px;
+                bottom: -80px;
+                color: rgba(255, 99, 71, 0.144);
+            }
+        }
+
+        .vision {
+            flex: 1;
+            padding: 20px!important;
+            height: 600px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #2730431b;
+
+            position: relative;
+            overflow: hidden;
+
+            i{
+                font-size: 250px;
+                position: absolute;
+                right: -60px;
+                top: -70px;
+                color: #e3b1f245;
+            }
+        }
+
+    }
+
+    .values {
+       padding: 20px!important;
+       height: 300px;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+       background-color: #e2d8e52c;
+
+       position: relative;
+       overflow: hidden;
+
+       i{
+           font-size: 300px;
+           position: absolute;
+           right: -90px;
+           bottom: -90px;
+           color: rgba(255, 99, 71, 0.087);
+       }
+
+
+       .values__info {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+
+            ul {
+                list-style: none;
+                list-style-position: inside;
+
+                li {
+                    font-size: 20px;
+                    // padding: 8px;
+
+                }
+            }
+       }
+    }
+
+
+}

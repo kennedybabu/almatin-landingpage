@@ -1,0 +1,23 @@
+<section class="third-section" #thirdSection>
+    <h4 class="heading-4" id="team">Meet Our Team</h4>
+    <div class="team">
+        @for (user of data; track user.id) {
+           <div>
+                <div class="team-member card">
+                    <img [src]="user.avatar" alt="{{user.name}}">
+                    <div class="overlay" (click)="openDialog(user)">
+                        <div class="inner">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+               <div class="team__info">
+                <p>{{user.name}}</p>
+                <small>{{ user.role }}</small>
+               </div>
+           </div>
+        } @empty {
+            <p>Loading...</p>
+        }
+    </div>
+</section>

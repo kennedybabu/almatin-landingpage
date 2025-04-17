@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HeaderComponent } from './core/header/header.component';
+import { HeroComponent } from './features/hero/hero.component';
+import { AboutUsComponent } from './features/about-us/about-us.component';
+import { TeamComponent } from './features/team/team.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { MissionVisionComponent } from "./features/mission-vision/mission-vision.component";
 @NgModule({
   declarations: [
     AppComponent
@@ -14,8 +19,13 @@ import { HeaderComponent } from './core/header/header.component';
     BrowserModule,
     AppRoutingModule,
     MatDialogModule,
-    HeaderComponent
-  ],
+    HeaderComponent,
+    HeroComponent,
+    AboutUsComponent,
+    TeamComponent,
+    FooterComponent,
+    MissionVisionComponent
+],
   providers: [
     provideAnimationsAsync()
   ],
