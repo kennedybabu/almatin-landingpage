@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatDialogModule} from '@angular/material/dialog';
+import { HeaderComponent } from './core/header/header.component';
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +13,8 @@ import {MatDialogModule} from '@angular/material/dialog';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatDialogModule
+    MatDialogModule,
+    HeaderComponent
   ],
   providers: [
     provideAnimationsAsync()

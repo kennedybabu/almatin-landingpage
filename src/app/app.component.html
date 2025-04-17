@@ -1,5 +1,5 @@
 <div class="main">
-    <header class="header">
+    <!-- <header class="header">
         <ul class="menu" #menu>
             <li class="menu__item"><a class="menu__link">Home</a></li>
             <li class="menu__item"><a class="menu__link">About Us</a></li>
@@ -11,7 +11,8 @@
             <li class="menu__item"><a class="menu__link">Blog</a></li>
             <li class="menu__item"><a class="menu__link">FAQ</a></li>
         </ul>
-    </header>
+    </header> -->
+    <app-header></app-header>
 
     <section class="first-section">
         <div class="info">
@@ -36,10 +37,6 @@
     <section class="second-section" #secondSection>
         <div class="box"></div>
         <h4 class="heading-4" id="about">About Us</h4>
-        <!-- <h1 class="heading-1" id="buy">
-            Buying ipsum dolor sit, amet consectetur 
-            adipisicing elit. Alias rerum hic illum atque.
-        </h1> -->
         <div class="info-1">
             <div class="info-1__text">
                 <span class="quote">
@@ -58,6 +55,56 @@
             </div>
         </div>
     </section>
+
+    <section class="fourth-section">
+        <div class="upper">
+            <div class="mission">
+                <h3 class="heading-3">
+                    Our
+                </h3>
+                <h1 class="heading-1">Mission</h1>
+                <div class="info">
+                    <span class="quote">“</span>
+                    <p>To provide access to quality goods and services, 
+                        enabling our clients to achieve their desired potential 
+                        through timely accomplishments of tasks.”
+                    </p>
+                </div>
+                <i class="bi bi-bullseye"></i>
+            </div>
+            <div class="vision">
+                <h3 class="heading-3">
+                    Our
+                </h3>
+                <h1 class="heading-1">Vision</h1>
+                <div class="info">
+                    <span class="quote">“</span>
+                    <p>To be the leading innovator in digital solutions, transforming how businesses and organizations connect, operate and thrive in a seamlessly integrated technological future.
+                    </p>
+                </div>
+                <i class="bi bi-eye-fill"></i>
+            </div>
+        </div>
+        <div class="values">
+            <div>
+                <h3 class="heading-3">
+                    Our
+                </h3>
+                <h1 class="heading-1">Values</h1>
+            </div>
+            <div class="values__info">
+                <ul>
+                    <li>Integrity and Accountability</li>
+                    <li>Innovation and creativity</li>
+                    <li>A Commitment to Excellence</li>
+                    <li>Environmental consciousness</li>
+                    <li>Customer Focus</li>
+                </ul>
+            </div>
+            <i class="bi bi-flower3"></i>
+        </div>
+    </section>
+    
     <section class="third-section" #thirdSection>
         <h4 class="heading-4" id="team">Meet Our Team</h4>
         <div class="team">
@@ -77,11 +124,10 @@
                    </div>
                </div>
             } @empty {
-                <p>No items</p>
+                <p>Loading...</p>
             }
         </div>
     </section>
-
     <footer class="footer">
         <div class="footer__content">
             <div class="footer__brand">
@@ -97,7 +143,6 @@
                         <li class="footer__item"><a href="#" class="footer__link">About Us</a></li>
                         <li class="footer__item"><a href="#" class="footer__link">Team</a></li>
                         <li class="footer__item"><a href="#" class="footer__link">Services</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Testimonials</a></li>
                     </ul>
                 </div>
                 
@@ -106,18 +151,16 @@
                     <ul class="footer__menu">
                         <li class="footer__item"><a href="#" class="footer__link">Blog</a></li>
                         <li class="footer__item"><a href="#" class="footer__link">FAQ</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Investment Guide</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Market Analysis</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer__column">
                     <h4 class="footer__heading">Contact Us</h4>
                     <address class="footer__contact">
-                        <p class="footer__info">123 Finance Street</p>
-                        <p class="footer__info">London, UK EC1A 1BB</p>
-                        <p class="footer__info">Email: infocom</p>
-                        <p class="footer__info">Phone: +44 20 1234 5678</p>
+                        <p class="footer__info">Ngong Road</p>
+                        <p class="footer__info">Nairobi, Kenya</p>
+                        <p class="footer__info">Email: almatin.com</p>
+                        <p class="footer__info">Phone: +254 234 5678</p>
                     </address>
                 </div>
             </div>

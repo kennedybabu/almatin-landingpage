@@ -12,14 +12,21 @@
 
         img {
             width: 100%;
+            height: 80%;
             
+        }
+
+        .dialog__visual-info {
+            background-color: #2b2b2b;
+            width: 100%;
+            height: 20%;
         }
     }
 
 
     .dialog__info {
         width: 60%;
-        padding: 20px;
+        padding: 20px!important;
 
         .dialog__header {
             margin-bottom: 20px;
