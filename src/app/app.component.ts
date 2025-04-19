@@ -1,22 +1,10 @@
-import { Component, OnInit, Inject, ViewChild, ElementRef, viewChild, inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, ElementRef } from '@angular/core';
 import { gsap} from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { DOCUMENT } from "@angular/common"
-import { trigger } from '@angular/animations';
-import {
-  MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogTitle,
-  MatDialogContent,
-} from '@angular/material/dialog';
-import { DialogComponent } from './core/shared/dialog/dialog/dialog.component';
-import * as teamData from './../assets/team.json';
-
 
 
 gsap.registerPlugin(ScrollTrigger);
-
-
 
 @Component({
   selector: 'app-root',
@@ -24,15 +12,16 @@ gsap.registerPlugin(ScrollTrigger);
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent  implements OnInit {
-  // title = 'almatin-landingpage';
   @ViewChild('secondSection', { static: true }) secondSection!: ElementRef<HTMLDivElement>;
-
-
+  opened = false;
 
   constructor(@Inject(DOCUMENT) private document:Document) {
 
   }
 
+  toggleSideBar(event: Event) {
+    this.opened = !this.opened
+  }
 
   ngOnInit(): void {
     this.initialAnimations();
@@ -174,7 +163,5 @@ export class AppComponent  implements OnInit {
       y:-30,
       delay: .8
     })
-  }
-
-  
+  }  
 }

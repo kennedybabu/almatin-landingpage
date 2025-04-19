@@ -11,6 +11,8 @@ import { AboutUsComponent } from './features/about-us/about-us.component';
 import { TeamComponent } from './features/team/team.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { MissionVisionComponent } from "./features/mission-vision/mission-vision.component";
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -24,7 +26,8 @@ import { MissionVisionComponent } from "./features/mission-vision/mission-vision
     AboutUsComponent,
     TeamComponent,
     FooterComponent,
-    MissionVisionComponent
+    MissionVisionComponent,
+    MatSidenavModule
 ],
   providers: [
     provideAnimationsAsync()

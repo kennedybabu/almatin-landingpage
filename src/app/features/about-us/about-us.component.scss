@@ -8,16 +8,12 @@
 
   .second-section {
     padding: 0 20px!important;
-    // border-right: 1px solid #e1e1e1;
-    // border-left: 1px solid #e1e1e1;
-    // grid-column: center-start / center-end;
     grid-row: 3/4;
     display: grid;
     position: relative;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(6, min-content);
     gap: 20px;
-    // padding-bottom: 20px;
 
     .box {
         width: 600px;
@@ -91,6 +87,20 @@
             height: 500px;
             overflow: hidden;
             margin-right: 20px;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .info-1{
+        display: flex!important;
+        flex-direction: column;
+        padding-bottom: 20px!important;
+
+        .info-1__text {
+            p {
+                width: 100%;
+            }
         }
     }
 }

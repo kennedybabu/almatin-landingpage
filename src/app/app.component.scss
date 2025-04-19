@@ -1,0 +1,19 @@
+mat-drawer {
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .d-flex {
+        justify-content: end;
+
+        .icon {
+            padding: 20px!important;
+
+            i {
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+}

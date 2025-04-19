@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, ViewChild, ElementRef, viewChild, inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, ElementRef, viewChild, inject, Output, EventEmitter } from '@angular/core';
 import { gsap} from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { DOCUMENT } from "@angular/common"
@@ -17,9 +17,15 @@ gsap.registerPlugin(ScrollTrigger);
 export class HeaderComponent implements OnInit {
   @ViewChild('menu', { static: true }) menu!: ElementRef<HTMLDivElement>;
   @ViewChild('menuSecond', { static: true }) menuSecond!: ElementRef<HTMLDivElement>;
+  @Output() toggle: EventEmitter<any> = new EventEmitter();
 
   constructor(@Inject(DOCUMENT) private document:Document) {
 
+  }
+
+
+  openSideMenu() {
+    this.toggle.emit(true)
   }
 
   ngOnInit(): void {
@@ -38,12 +44,12 @@ export class HeaderComponent implements OnInit {
       stagger: 0.2,
       delay: 0.5
     })
-    gsap.from(this.menuSecond.nativeElement.childNodes, {
-      duration: 0.5,
-      opacity:0,
-      y: -20,
-      stagger: 0.2,
-      delay: 0.8
-    })
+    // gsap.from(this.menuSecond.nativeElement.childNodes, {
+    //   duration: 0.5,
+    //   opacity:0,
+    //   y: -20,
+    //   stagger: 0.2,
+    //   delay: 0.8
+    // })
   }
 }

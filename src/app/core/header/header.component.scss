@@ -11,14 +11,17 @@
     justify-content: space-between;
     height: 120px;
     padding: 20px!important;
+    position: relative;
 
     .menu {
         display: flex;
         justify-content: space-between;
         width: 100%;
-    
+        
         &__item {
-            padding: 15px 20px;
+          padding: 15px 20px;
+          text-decoration: none;
+          color: #2d2d2d;
         }
     
         &__link {
@@ -28,5 +31,33 @@
             letter-spacing: 1.5px;
             cursor: pointer;
         }
+    }
+
+    .burger {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 20px!important;
+
+      i {
+        cursor: pointer;
+        font-size: 25px;
+        color: black;
+      }
+    }
+
+  }
+
+  // Add this media query to hide the menu on medium and smaller screens
+@media (max-width: 1024px) {
+    .header .menu {
+      display: none;
+    }
+  }
+
+
+  @media(min-width: 1024px) {
+    .burger {
+      display: none;
     }
   }
