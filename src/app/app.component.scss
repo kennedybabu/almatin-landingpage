@@ -16,4 +16,26 @@ mat-drawer {
             }
         }
     }
+
+    .menu__links {
+        width: 100%;
+        padding: 20px!important;
+
+        .menu__sidebar {
+            .menu__item {
+                list-style: none;
+                margin: 1rem 0;
+                text-decoration: none;
+                color: #2e2e2e;
+               
+
+                .menu__link {
+                    list-style: none;
+                    padding: 1rem;
+                    text-decoration: none;
+                    color: #2e2e2e;
+                }
+            }
+        }
+    }
 }
