@@ -23,6 +23,20 @@ export class AppComponent  implements OnInit {
     this.opened = !this.opened
   }
 
+  scrollToSection(section: string) {
+    this.opened = false;
+
+    setTimeout(() => {
+      const element = this.document.getElementById(section);
+      if(element) {
+        element.scrollIntoView({
+          behavior:'smooth',
+          block:'start'
+        });
+      }
+    }, 300);
+  }
+
   ngOnInit(): void {
     this.initialAnimations();
     this.initScrollAnimations();

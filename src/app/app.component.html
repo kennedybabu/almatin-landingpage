@@ -8,9 +8,9 @@
         </div>
         <div class="menu__links">
             <ul class="menu__sidebar" #menu>
-                <li class="menu__item"><a class="menu__link">Home</a></li>
-                <li class="menu__item"><a class="menu__link">About Us</a></li>
-                <li class="menu__item"><a class="menu__link">Team</a></li>
+                <li class="menu__item" (click)="scrollToSection('home')"><a class="menu__link">Home</a></li>
+                <li class="menu__item" (click)="scrollToSection('about')"><a class="menu__link">About Us</a></li>
+                <li class="menu__item" (click)="scrollToSection('team')"><a class="menu__link">Team</a></li>
                 <li class="menu__item"><a class="menu__link">Services</a></li>
                 <li class="menu__item"><a class="menu__link">Testimonials</a></li>      
                 <li class="menu__item"><a class="menu__link">Blog</a></li>
@@ -21,10 +21,10 @@
     <mat-drawer-content>
         <div class="main">
             <app-header (toggle)="toggleSideBar($event)"></app-header>
-            <app-hero></app-hero>
-            <app-about-us></app-about-us>
-            <app-mission-vision></app-mission-vision>
-            <app-team></app-team>
+            <app-hero class="hero"></app-hero>
+            <app-about-us class="about"></app-about-us>
+            <app-mission-vision class="mission"></app-mission-vision>
+            <app-team class="team"></app-team>
             <app-footer></app-footer>
         </div>
     </mat-drawer-content>

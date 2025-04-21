@@ -23,6 +23,19 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  scrollToSection(section: string) {
+
+    setTimeout(() => {
+      const element = this.document.getElementById(section);
+      if(element) {
+        element.scrollIntoView({
+          behavior:'smooth',
+          block:'start'
+        });
+      }
+    }, 300);
+  }
+
 
   openSideMenu() {
     this.toggle.emit(true)
